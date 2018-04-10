@@ -38,7 +38,7 @@ shortcut = {
 				else if(e.srcElement) element=e.srcElement;
 				if(element.nodeType==3) element=element.parentNode;
 
-				if(element.tagName == 'INPUT' || element.tagName == 'TEXTAREA') return;
+				if(element.tagName == 'INPUT' || element.tagName == 'TEXTAREA' || element.isContentEditable) return;
 			}
 	
 			//Find Which key is pressed
