@@ -166,10 +166,10 @@ shortcut = {
 
 				} else { //The special keys did not match
 					if(character == k) kp++;
-					else {
-						if(shift_nums[character] && e.shiftKey) { //Stupid Shift key bug created by using lowercase
-							character = shift_nums[character]; 
-							if(character == k) kp++;
+					else if (e.shiftKey) {
+						var shifted_char = (shift_nums[k] || shift_nums[character]);
+						if(shifted_char) { //Stupid Shift key bug created by using lowercase
+							if(shifted_char == k || shift_nums[k] == character) kp++;
 						}
 					}
 				}
