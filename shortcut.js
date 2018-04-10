@@ -1,9 +1,10 @@
 /**
  * http://www.openjs.com/scripts/events/keyboard_shortcuts/
- * Version : 2.01.B
- * By Binny V A
+ * Version : 2.01.B (when forked)
+ * By Binny V A., modified by Damon H. (TheDcoder)
  * License : BSD
  */
+
 shortcut = {
 	'all_shortcuts':{},//All the shortcuts are stored in this array
 	'add': function(shortcut_combination,callback,opt) {
