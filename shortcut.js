@@ -169,7 +169,11 @@ shortcut = {
 					else if (e.shiftKey) {
 						var shifted_char = (shift_nums[k] || shift_nums[character]);
 						if(shifted_char) { //Stupid Shift key bug created by using lowercase
-							if(shifted_char == k || shift_nums[k] == character) kp++;
+							if(shifted_char == k || shift_nums[k] == character) {
+								kp++;
+							} else {
+								if (!isNaN(k) && k == e.code.slice(-1)) kp++;
+							}
 						}
 					}
 				}
