@@ -175,6 +175,8 @@ shortcut = {
 								if (!isNaN(k) && k == e.code.slice(-1)) kp++;
 							}
 						}
+					} else if (e.altKey) {
+						if (!isNaN(k) && k == e.code.slice(-1)) kp++;
 					}
 				}
 			}
