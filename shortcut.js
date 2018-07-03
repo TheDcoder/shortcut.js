@@ -142,6 +142,7 @@ shortcut = {
 			if(e.altKey)	modifiers.alt.pressed = true;
 			if(e.metaKey)   modifiers.meta.pressed = true;
                         
+			let k;
 			for(var i=0; k=keys[i],i<keys.length; i++) {
 				//Modifiers
 				if(k == 'ctrl' || k == 'control') {
