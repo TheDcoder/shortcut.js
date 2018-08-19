@@ -14,7 +14,8 @@ shortcut = {
 			'propagate':false,
 			'disable_in_input':false,
 			'target':document,
-			'keycode':false
+			'keycode':false,
+			'capture':false
 		}
 		if(!opt) opt = default_options;
 		else {
@@ -209,7 +210,7 @@ shortcut = {
 			'event': opt['type']
 		};
 		//Attach the function with the event
-		if(ele.addEventListener) ele.addEventListener(opt['type'], func, false);
+		if(ele.addEventListener) ele.addEventListener(opt['type'], func, {capture: opt['capture']});
 		else if(ele.attachEvent) ele.attachEvent('on'+opt['type'], func);
 		else ele['on'+opt['type']] = func;
 	},
